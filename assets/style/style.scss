@@ -12,19 +12,23 @@ $bg-task: rgba(255, 255, 255, 0.1);
 // }
 
 body {
+    background-image: url(../img/wpp3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     height: 100vh;
     background-color: $bg;
 }
 
 .taskbar {
-    width: 80vw;
+    width: 100vw;
     height: 48px;
     backdrop-filter: saturate(3) blur(20px);
-    border-radius: 8px;
+    border-radius: 8px 8px 0px 0px;
     background: $bg-task;
     display: inline-flex;
     justify-content: center;

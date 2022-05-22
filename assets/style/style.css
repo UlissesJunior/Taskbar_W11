@@ -5,6 +5,10 @@
 }
 
 body {
+  background-image: url(../img/wpp3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,9 +16,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -23,11 +27,11 @@ body {
 }
 
 .taskbar {
-  width: 80vw;
+  width: 100vw;
   height: 48px;
   -webkit-backdrop-filter: saturate(3) blur(20px);
           backdrop-filter: saturate(3) blur(20px);
-  border-radius: 8px;
+  border-radius: 8px 8px 0px 0px;
   background: rgba(255, 255, 255, 0.1);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
