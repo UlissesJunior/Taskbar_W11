@@ -1,0 +1,75 @@
+$bg: #1B1B22;
+$bg-task: rgba(255, 255, 255, 0.1);
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+// html {
+//     zoom: 5;
+// }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $bg;
+}
+
+.taskbar {
+    width: 80vw;
+    height: 48px;
+    backdrop-filter: saturate(3) blur(20px);
+    border-radius: 8px;
+    background: $bg-task;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    // animation: popintro 800ms ease-in-out;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+    }
+
+    img:hover {
+        animation: top 4000ms ease-in-out;
+    }
+
+}
+
+.icon:hover {
+    cursor: pointer;
+    background: $bg-task;
+}
+
+.icon:active {
+    #icon {
+        animation: click 800ms ease-in-out;
+    }
+}
+
+@keyframes click {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.75);
+    }
+}
