@@ -8,4 +8,4 @@ Um site focado nas animações da taskbar do Windows 11.
 
 ## Demo
 
-Você pode testar o site neste <a href="ulissesjunior.github.io/taskbar_w11/">link</a>.
+Você pode testar o site neste <a href="https://ulissesjunior.github.io/Taskbar_W11/">link</a>.
