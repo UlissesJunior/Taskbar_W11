@@ -1,0 +1,13 @@
+//Funções
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin background() {
+    background-image: url(../img/wallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
