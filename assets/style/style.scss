@@ -21,12 +21,13 @@ body {
     background-color: $bg;
 }
 
-.taskbar { 
+.taskbar {
     @include center();
     width: 100vw;
     height: 48px;
     backdrop-filter: saturate(3) blur(20px);
     background: $bg-task;
+    //Margin entre os icons = 6px
 }
 
 .icon {
@@ -35,6 +36,8 @@ body {
     height: 40px;
     border-radius: 4px;
     position: relative;
+    margin-right: 6px;
+
 
     img {
         width: 24px;
@@ -46,6 +49,10 @@ body {
         animation: top 4000ms ease-in-out;
     }
 
+}
+
+.icon:last-child {
+    margin-right: 0px;
 }
 
 .icon:hover {
@@ -61,7 +68,9 @@ body {
     background: $bg-task;
 }
 
-.icon:active {
+.icon-active {
+    background: $bg-task;
+
     .active {
         width: 16px;
         height: 3px;
@@ -73,6 +82,6 @@ body {
     }
 
     #icon {
-        animation: click 800ms ease-in-out;
+        animation: click 400ms ease-in-out;
     }
 }

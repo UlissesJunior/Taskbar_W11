@@ -90,6 +90,7 @@ body {
   height: 40px;
   border-radius: 4px;
   position: relative;
+  margin-right: 6px;
 }
 
 .icon img {
@@ -103,11 +104,19 @@ body {
           animation: top 4000ms ease-in-out;
 }
 
+.icon:last-child {
+  margin-right: 0px;
+}
+
 .icon:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.icon:active .active {
+.icon-active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-active .active {
   width: 16px;
   height: 3px;
   position: absolute;
@@ -118,8 +127,8 @@ body {
   transition: ease-in;
 }
 
-.icon:active #icon {
-  -webkit-animation: click 800ms ease-in-out;
-          animation: click 800ms ease-in-out;
+.icon-active #icon {
+  -webkit-animation: click 400ms ease-in-out;
+          animation: click 400ms ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
