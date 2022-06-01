@@ -5,3 +5,13 @@ function active() {
     }) });
 } 
 active();
+
+function win () {
+    const win = document.querySelector(".icon");
+    const open = document.querySelector(".win")
+    win.addEventListener("click", () => {
+       open.classList.toggle("win-active");
+    })
+}
+
+win();

@@ -13,4 +13,13 @@
     }
 }
 
+@keyframes winactive {
+    0% {
+        top: -100%
+    }
+    100% {
+        top: 0px;
+    }
+}
+
 // animation: name 800ms ease-in-out;
