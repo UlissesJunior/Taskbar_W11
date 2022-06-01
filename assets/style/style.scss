@@ -28,7 +28,6 @@ body {
     height: 48px;
     backdrop-filter: saturate(3) blur(20px);
     background: $bg-task;
-    //Margin entre os icons = 6px
 }
 
 .icon {
@@ -93,7 +92,8 @@ body {
     border-radius: 8px;
     margin-bottom: 12px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
     input {
         display: none;
@@ -107,6 +107,9 @@ body {
         max-width: 540px;
         margin: auto;
     }
+    .top {
+        height: 110px;
+    }
     .input, input{
         display: flex;
         margin-top: 32px;
@@ -119,13 +122,15 @@ body {
         color: #FFF;
         padding: 8px;
     }
-    // .bot {
-    //     display: flex;
-    //     align-items: flex-end;
-    //     width: 100%;
-    //     height: 64px;
-    //     background-color: aqua;
-    // }
+    .mid {
+        width: 100%;
+        height: calc(100% - 110px - 64px); // mid=100%-top-bot
+    }
+    .bot {
+        display: flex;
+        width: 100%;
+        height: 64px;
+    }
 }
 
 .wpp-engine {
