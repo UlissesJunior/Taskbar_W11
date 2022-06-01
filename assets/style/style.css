@@ -174,7 +174,9 @@ body {
 }
 
 .win-active {
-  background-color: #222851;
+  background-color: rgba(36, 36, 36, 0.8);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   -webkit-transition: ease-in-out 400ms;
   transition: ease-in-out 400ms;
 }
@@ -188,7 +190,8 @@ body {
   height: 110px;
 }
 
-.win-active .input, .win-active input {
+.win-active .input,
+.win-active input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,6 +212,8 @@ body {
 }
 
 .win-active .bot {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-top: 1px solid #444;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -95,22 +95,28 @@ body {
     align-items: center;
     flex-direction: column;
     position: relative;
+
     input {
         display: none;
     }
 }
 
 .win-active {
-    background-color: $win-active;
+    background-color: $win-bg;
+    backdrop-filter: blur(20px);
     transition: ease-in-out 400ms;
+
     .container {
         max-width: 540px;
         margin: auto;
     }
+
     .top {
         height: 110px;
     }
-    .input, input{
+
+    .input,
+    input {
         display: flex;
         margin-top: 32px;
         width: calc(580px - 16px);
@@ -122,11 +128,15 @@ body {
         color: #FFF;
         padding: 8px;
     }
+
     .mid {
         width: 100%;
         height: calc(100% - 110px - 64px); // mid=100%-top-bot
     }
+
     .bot {
+        background-color: $win-bot;
+        border-top: 1px solid $win-divider;
         display: flex;
         width: 100%;
         height: 64px;
