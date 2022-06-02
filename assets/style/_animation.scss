@@ -15,10 +15,12 @@
 
 @keyframes winactive {
     0% {
-        top: -100%
+        opacity: 0;
+        transform: translateY(60px);
     }
     100% {
-        top: 0px;
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 

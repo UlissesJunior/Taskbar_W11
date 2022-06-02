@@ -30,19 +30,27 @@
 
 @-webkit-keyframes winactive {
   0% {
-    top: -100%;
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
   }
   100% {
-    top: 0px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
 @keyframes winactive {
   0% {
-    top: -100%;
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
   }
   100% {
-    top: 0px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
@@ -177,8 +185,8 @@ body {
   background-color: rgba(36, 36, 36, 0.8);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
-  -webkit-transition: ease-in-out 400ms;
-  transition: ease-in-out 400ms;
+  -webkit-animation: winactive 250ms ease-in-out;
+          animation: winactive 250ms ease-in-out;
 }
 
 .win-active .container {
@@ -196,14 +204,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-top: 32px;
+  padding: 8px;
   width: calc(580px - 16px);
   height: calc(40px - 16px);
   background-color: #1F222D;
-  outline: none;
   border-radius: 4px;
   border-bottom: 2px solid #5AC4FB;
+  outline: none;
+  font-size: 14px;
   color: #FFF;
-  padding: 8px;
 }
 
 .win-active .mid {

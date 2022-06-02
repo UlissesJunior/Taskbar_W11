@@ -104,7 +104,8 @@ body {
 .win-active {
     background-color: $win-bg;
     backdrop-filter: blur(20px);
-    transition: ease-in-out 400ms;
+    // transition: ease-in-out 400ms;
+    animation: winactive 250ms ease-in-out;
 
     .container {
         max-width: 540px;
@@ -119,14 +120,15 @@ body {
     input {
         display: flex;
         margin-top: 32px;
+        padding: 8px;
         width: calc(580px - 16px);
         height: calc(40px - 16px);
         background-color: $input-bg;
-        outline: none;
         border-radius: 4px;
         border-bottom: 2px solid $input-border;
+        outline: none;
+        font-size: 14px;
         color: #FFF;
-        padding: 8px;
     }
 
     .mid {
