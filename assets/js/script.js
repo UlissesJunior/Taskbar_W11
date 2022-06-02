@@ -20,9 +20,10 @@ function time () {
     var data = new Date();
     let hour = data.getHours();
     let minutes = data.getMinutes();
+    let time = hour + ":" + minutes;
     // let time = hour.concat(":", minutes)
     // console.log(time)
-    console.log(hour + ":" + minutes)
+    console.log(time)
 }
 
 time();
