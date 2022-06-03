@@ -19,11 +19,13 @@ win();
 function time () {
     var data = new Date();
     let hour = data.getHours();
-    let minutes = data.getMinutes();
+    let minutes = data.getMinutes(); //if minute <10, adicionar um 0 ao lado 
     let time = hour + ":" + minutes;
     // let time = hour.concat(":", minutes)
-    // console.log(time)
     console.log(time)
+    //Data
+    const date = data.toLocaleDateString();
+    console.log(date)
 }
 
 time();
