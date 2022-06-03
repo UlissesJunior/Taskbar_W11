@@ -152,11 +152,21 @@ body {
     border-radius: 8px;
 }
 
-.date {
+.task-date {
     width: 100px;
     height: 40px;
     position: absolute;
     border-radius: 4px;
     right: 12px;
-    // background-color: $bg-task;
+    color: #FFF;
+    font-size: 12px;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.task-date:hover {
+    background-color: $bg-task;
 }

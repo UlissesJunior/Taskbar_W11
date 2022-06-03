@@ -26,6 +26,9 @@ function time () {
     //Data
     const date = data.toLocaleDateString();
     console.log(date)
+
+    document.querySelector(".time").innerHTML = "<a>" + time + "</a>";
+    document.querySelector(".date").innerHTML = "<a>" + date + "</a>";
 }
 
 time();
