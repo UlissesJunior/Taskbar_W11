@@ -1,7 +1,7 @@
 function active() {
     const icons = document.querySelectorAll("div.icon");
     icons.forEach((icon) => { icon.addEventListener("click", () => {
-        icon.classList.toggle("icon-active");
+        icon.classList.toggle("icon-active"); //Arrumar a bolinha do active por class
     }) });
 } 
 active();
@@ -19,9 +19,13 @@ win();
 function time () {
     var data = new Date();
     let hour = data.getHours();
-    let minutes = data.getMinutes(); //if minute <10, adicionar um 0 ao lado 
+    let minutes = data.getMinutes();
+
+    if (minutes<10) {
+        minutes = '0' + minutes;
+    }
+
     let time = hour + ":" + minutes;
-    // let time = hour.concat(":", minutes)
     console.log(time)
     //Data
     const date = data.toLocaleDateString();
