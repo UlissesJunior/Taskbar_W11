@@ -275,7 +275,7 @@ body {
 }
 
 .task-date .container-moon {
-  background: #1F222D;
+  background: url(../img/moon.svg);
   width: 14px;
   height: 14px;
   margin: 0px 9px;
