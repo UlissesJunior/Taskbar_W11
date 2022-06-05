@@ -126,16 +126,13 @@ body {
   position: absolute;
 }
 
-.icon img:hover {
-  -webkit-animation: top 4000ms ease-in-out;
-          animation: top 4000ms ease-in-out;
-}
-
 .icon:last-child {
   margin-right: 0px;
 }
 
 .icon:hover {
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -282,6 +279,8 @@ body {
 }
 
 .task-date:hover {
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
   background-color: rgba(255, 255, 255, 0.1);
 }
 /*# sourceMappingURL=style.css.map */

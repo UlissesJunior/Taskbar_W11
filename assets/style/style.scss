@@ -38,15 +38,10 @@ body {
     position: relative;
     margin-right: 6px;
 
-
     img {
         width: 24px;
         height: 24px;
         position: absolute;
-    }
-
-    img:hover {
-        animation: top 4000ms ease-in-out;
     }
 
 }
@@ -65,6 +60,7 @@ body {
     //     background: #8C8E9A;
     //     transition: ease-in-out 200ms;
     // }
+    transition: 200ms ease-in-out;
     background: $bg-task;
 }
 
@@ -183,5 +179,6 @@ body {
 }
 
 .task-date:hover {
+    transition: 200ms ease-in-out;
     background-color: $bg-task;
 }
