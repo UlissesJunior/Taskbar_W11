@@ -162,9 +162,24 @@ body {
     font-size: 12px;
     cursor: default;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+
+    .container-date {
+        width: 64px;
+        margin-left: 6px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    .container-moon {
+        background: $input-bg;
+        width: 14px;
+        height: 14px;
+        margin: 0px 9px;
+    }
 }
 
 .task-date:hover {
