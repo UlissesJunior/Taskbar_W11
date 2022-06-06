@@ -24,6 +24,10 @@ function time () {
     if (minutes<10) {
         minutes = '0' + minutes;
     }
+    
+    if (hour<10) {
+        hour = '0' + hour;
+    }
 
     let time = hour + ":" + minutes;
     console.log(time)
@@ -36,3 +40,12 @@ function time () {
 }
 
 time();
+
+// function right_click() {
+//     const body = document.querySelector("body");
+//     body.addEventListener("scroll", () => {
+//         body.classList.toggle(".wpp-engine")
+//     })
+// }
+
+// right_click();
