@@ -41,6 +41,18 @@ function time () {
 
 time();
 
+function background () {
+    var bg = document.getElementsByClassName('wpp')
+    var wpp = document.getElementsByClassName('wpp-engine')
+    bg.addEventListener("click", () => {
+        wpp.style.cssText = `
+        visibility: visible;
+    `   
+    })
+}
+
+background();
+
 // function right_click() {
 //     const body = document.querySelector("body");
 //     body.addEventListener("scroll", () => {

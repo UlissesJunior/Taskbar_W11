@@ -232,6 +232,7 @@ body {
   height: 400px;
   background: #FFF;
   border-radius: 8px;
+  border: 2px solid #1A1E5C;
 }
 
 .task-date {
