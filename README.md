@@ -1,9 +1,10 @@
-# TaskBar Windows 11
+# TaskBar Windows 11 - React
 
 Um site focado nas animações da taskbar do Windows 11.
+Que agora está sendo convertido para React.js.
 
 <p align="center">
-<img src="assets/img/banner.png">
+<img src="src/img/banner.png">
 <p>
 
 ## Demo
