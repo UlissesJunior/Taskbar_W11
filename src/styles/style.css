@@ -227,14 +227,6 @@ body {
   height: 64px;
 }
 
-.wpp-engine {
-  width: 1160px;
-  height: 400px;
-  background: #FFF;
-  border-radius: 8px;
-  border: 2px solid #1A1E5C;
-}
-
 .task-date {
   width: 100px;
   height: 40px;
@@ -273,7 +265,7 @@ body {
 }
 
 .task-date .container-moon {
-  background: url(../img/moon.svg);
+  background: url(../img/icons/svg/moon.svg);
   width: 14px;
   height: 14px;
   margin: 0px 9px;

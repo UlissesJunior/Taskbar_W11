@@ -1,72 +1,65 @@
 import React from "react";
 import "./styles/style.css";
-import "./script"
-import Icon1 from "./img/win11.png"
-// import Icon2 from "./img/"
-// import Icon3 from "./img/"
-// import Icon4 from "./img/"
-// import Icon5 from "./img/"
-// import Icon6 from "./img/"
-// import Icon7 from "./img/"
-// import Icon8 from "./img/"
+
+import Date from "./components/windows-date";
+import WinMenu from "./components/windows-menu";
+
+import imgicon from "./img/icons/png/win11.png";
+import iconConfig from "./img/icons/png/iconConfig.png";
+import iconExArc from "./img/icons/png/iconExArc.png";
+import iconVsCode from "./img/icons/png/iconVsCode.png";
+import iconWord from "./img/icons/png/iconWord.png";
+import iconOpera from "./img/icons/png/iconOpera.png";
+import iconSpotify from "./img/icons/png/iconSpotify.png";
+import iconToDo from "./img/icons/png/iconToDo.png";
+
+const icons = [
+  {
+    name: "Configurações",
+    image: iconConfig,
+  },
+  {
+    name: "Explorador de Arquivos",
+    image: iconExArc,
+  },
+  {
+    name: "Visual Studio Code",
+    image: iconVsCode,
+  },
+  {
+    name: "Word",
+    image: iconWord,
+  },
+  {
+    name: "Navegador Opera",
+    image: iconOpera,
+  },
+  {
+    name: "Spotify",
+    image: iconSpotify,
+  },
+  {
+    name: "Microsoft To Do",
+    image: iconToDo,
+  },
+];
 
 function App() {
   return (
     <>
-      <div class="win">
-        <div class="top">
-          <input type="text" placeholder="Digite aqui para pesquisar" />
+      <WinMenu />
+      <div className="taskbar">
+        <div className="icon">
+          <img src={imgicon} id="icon" alt="icone" />
         </div>
-        <div class="mid"></div>
-        <div class="bot"></div>
-      </div>
-      {/* <div class="wpp-engine"></div> */}
-      <div class="taskbar" onselectstart="return false">
-        <div class="icon">
-          <img src={Icon1} id="icon" alt="icon1" />
-        </div>
-        <div class="icon">
-          <img
-            src={Icon1}
-            id="icon"
-            class="wpp"
-            alt="icon2"
-          />
-          <div class="active"></div>
-        </div>
-        <div class="icon">
-          <img src={Icon2} id="icon" alt="icon3" />
-          <div class="active"></div>
-        </div>
-        <div class="icon">
-          <img src={Icon1} id="icon" alt="icon4" />
-          <div class="active"></div>
-        </div>
-        <div class="icon">
-          <img src={Icon1} id="icon" alt="icon5" />
-          <div class="active"></div>
-        </div>
-        <div class="icon">
-          <img src={Icon1} id="icon" alt="icon5" />
-          <div class="active"></div>
-        </div>
-        <div class="icon">
-          <img src={Icon1} id="icon" alt="icon7" />
-          <div class="active"></div>
-        </div>
-        <div class="icon">
-          <img src={Icon1} id="icon" alt="icon8" />
-          <div class="active"></div>
-        </div>
-        <div class="task-date">
-          <div class="container-date">
-            <div class="time"></div>
-            <div class="date"></div>
+        {icons.map((icons) => (
+          <div className="icon">
+            {/* {icons.name} */}
+            <img src={icons.image} id="icon" alt="" />
+            <div className="active"></div>
           </div>
-          <div class="container-moon">
-            <div class="moon"></div>
-          </div>
-        </div>
+        ))}
+        <Date />
       </div>
     </>
   );
