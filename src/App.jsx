@@ -44,18 +44,23 @@ const icons = [
   },
 ];
 
+function active() {
+  icons.isActive = !icons.isActive;
+} 
+
+
 function App() {
   return (
     <>
-      <WinMenu />
+      <WinMenu icons={icons} />
       <div className="taskbar">
         <div className="icon">
-          <img src={imgicon} id="icon" alt="icone" />
+          <img src={imgicon} id="icon" alt="icone"/>
         </div>
         {icons.map((icons) => (
-          <div className="icon">
+          <div className={`icon ${icons.isActive && "icon-active"}`} onClick={active}>
             {/* {icons.name} */}
-            <img src={icons.image} id="icon" alt="" />
+            <img src={icons.image} id="icon" alt="ico" />
             <div className="active"></div>
           </div>
         ))}
