@@ -1,8 +1,8 @@
 import React from "react";
 
-const Windows = ({ icons }) => {
+const Windows = ({ active }) => {
   return (
-    <div className={`win ${icons.isActive && "win-active"}`}>
+    <div className={active ? "win win-active" : "win"}>
       <div className="top">
         <input type="text" placeholder="Digite aqui para pesquisar" />
       </div>

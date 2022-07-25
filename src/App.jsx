@@ -12,54 +12,61 @@ import iconWord from "./img/icons/png/iconWord.png";
 import iconOpera from "./img/icons/png/iconOpera.png";
 import iconSpotify from "./img/icons/png/iconSpotify.png";
 import iconToDo from "./img/icons/png/iconToDo.png";
+import { useState } from "react";
 
 const icons = [
   {
     name: "Configurações",
     image: iconConfig,
+    id: 1,
   },
   {
     name: "Explorador de Arquivos",
     image: iconExArc,
+    id: 2,
   },
   {
     name: "Visual Studio Code",
     image: iconVsCode,
+    id: 3,
   },
   {
     name: "Word",
     image: iconWord,
+    id: 4,
   },
   {
     name: "Navegador Opera",
     image: iconOpera,
+    id: 5,
   },
   {
     name: "Spotify",
     image: iconSpotify,
+    id: 6,
   },
   {
     name: "Microsoft To Do",
     image: iconToDo,
+    id: 7,
   },
 ];
 
-function active() {
-  icons.isActive = !icons.isActive;
-} 
-
 
 function App() {
+  const[active, setMode] = useState(false)
+  const Toogle = () => {
+    setMode(!active)
+  } 
   return (
     <>
-      <WinMenu icons={icons} />
+      <WinMenu active={active} icons={icons} />
       <div className="taskbar">
         <div className="icon">
-          <img src={imgicon} id="icon" alt="icone"/>
+          <img src={imgicon} onClick={Toogle} id="icon" alt="icone"/>
         </div>
         {icons.map((icons) => (
-          <div className={`icon ${icons.isActive && "icon-active"}`} onClick={active}>
-            {/* {icons.name} */}
+          <div key={icons.id} className={active ? "icon icon-active" : "icon"} onClick={Toogle}>
             <img src={icons.image} id="icon" alt="ico" />
             <div className="active"></div>
           </div>
